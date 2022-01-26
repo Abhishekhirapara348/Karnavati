@@ -1,29 +1,40 @@
 {
   "expo": {
-    "name": "travellog0.0",
-    "slug": "travellog0.0",
+    "name": "Karnavati",
+    "slug": "Karnavati-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/exoappiconpimg.png",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "image": "./assets/mysplas.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#3A8926"
     },
     "updates": {
-      "fallbackToCacheTimeout": 0
+      "fallbackToCacheTimeout": 60000
     },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-xxxxxx"
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
+        "foregroundImage": "./assets/exoappiconpimg.png",
+        "backgroundColor": "#3A8926"  
+      },
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyDxU5fB67rc_EQ1nET_Q7uSZMepxGLraZ0"
+        }
+    },
+      "softwareKeyboardLayoutMode": "pan",
+      "package": "io.expo.client",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
