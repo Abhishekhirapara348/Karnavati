@@ -6,16 +6,11 @@ import firebase from "firebase";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "...",
-  authDomain: "final-expo-app.firebaseapp.com",
-  projectId: "final-expo-app",
-  storageBucket: "final-expo-app.appspot.com",
-  messagingSenderId: "487602687344",
-  appId: "1:487602687344:web:5be35af5d78a45e88c53b5",
-};
+const firebaseConfig = {};
 
-!firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app;
+firebase.apps.length == 0
+  ? firebase.initializeApp(firebaseConfig)
+  : firebase.app;
 
 const db = firebase.firestore();
 

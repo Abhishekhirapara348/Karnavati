@@ -34,6 +34,7 @@ const RegisterScreen = ({ navigation }) => {
 
   const onRegister = async (email, password, username) => {
     try {
+      console.log("register");
       const authUser = await firebase
         .auth()
         .createUserWithEmailAndPassword(email, password);
@@ -71,10 +72,10 @@ const RegisterScreen = ({ navigation }) => {
 
         <Formik
           initialValues={{ email: "", username: "", password: "" }}
-          onSubmit={(values) => {
-            onRegister(values.email, values.password, values.username);
-          }}
-          validationSchema={Registerformchema}
+          onSubmit={(values) =>
+            onRegister(values.email, values.password, values.username)
+          }
+          // validationSchema={Registerformchema}
           validationOnMount={true}
         >
           {({ handleChange, handleBlur, handleSubmit, isValid, values }) => (

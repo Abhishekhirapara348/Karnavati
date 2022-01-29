@@ -92,7 +92,7 @@ const TabsNav = () => {
   );
 };
 
-export const Singninstack = () => {
+export const Singninstack = ({ userID }) => {
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -100,6 +100,9 @@ export const Singninstack = () => {
           headerShown: false,
           gestureEnabled: true,
         }}
+        initialRouteName={
+          userID == "eWwpGR6vdiMMxWrHRznAolDZkzp1" ? "Admin" : "TabsNav"
+        }
       >
         <Stack.Screen name="TabsNav" component={TabsNav} />
         <Stack.Screen name="Admin" component={Admin} />
