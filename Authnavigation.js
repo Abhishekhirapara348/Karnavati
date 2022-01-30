@@ -13,7 +13,17 @@ const Authnavigation = () => {
     []
   );
 
-  return <>{currentUser ? <Singninstack /> : <Signoutstack />}</>;
+  console.log(currentUser);
+
+  return (
+    <>
+      {currentUser ? (
+        <Singninstack userID={"eWwpGR6vdiMMxWrHRznAolDZkzp1"} />
+      ) : (
+        <Signoutstack />
+      )}
+    </>
+  );
 };
 
 export default Authnavigation;
